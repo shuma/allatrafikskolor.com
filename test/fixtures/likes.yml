@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fan_count: 1
+  school_id: 1
+
+two:
+  fan_count: 1
+  school_id: 1

@@ -1,0 +1,33 @@
+        <%= form_for [@school, Review.new] do |f| %>
+            <div class="reviews_comments_container">
+                <h3>Testat det? Berätta vad du tycker om <%= @school.name %></h3>
+                <div class="review_box rec1">
+                    <label class="input-check ch1">
+                        <input id="#rb1" type="radio" value="1"   name="review[rating]" /> Dåligt
+                    </label>
+                    <label class="input-check ch2">
+                        <input id="#rb2" type="radio" value="2"   name="review[rating]" /> Acceptabelt
+                    </label>
+                    <label class="input-check ch3">
+                        <input id="#rb3" type="radio" value="3"   name="review[rating]" /> Bra
+                    </label>
+                    <label class="input-check ch4">
+                        <input id="#rb4" type="radio" value="4"   name="review[rating]" /> Mycket bra
+                    </label>
+                    <label class="input-check ch5">
+                        <input id="#rb5" type="radio" value="5"   name="review[rating]" /> Utmärkt
+                    </label>
+                </div>
+                    <div class="review_box rec2">
+                        <%= f.text_area :content, rows: 1, cols: 70, placeholder: "Skriv några korta meningar om din upplevelse." %>
+                        <%= f.hidden_field :school_id, :value => @school.id %>
+                         <% if current_user %>
+                            <%= f.submit 'Spara din rekommendation', :class => "btn" %>
+                         <% else %>
+                            <%= f.submit 'Registrera mig via Facebook & spara min rekommendation', :class => "btn" %>
+                        <% end %>
+                    </div>
+                    
+            </div>
+        <% end %>
+    <% else %>

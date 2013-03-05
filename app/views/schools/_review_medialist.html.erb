@@ -1,0 +1,72 @@
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+        
+    <div class="tab-content">
+<% if @school.reviews.any? %>
+    <% @school.reviews.each do |review| %>
+    <ul class="media-list">
+        <li class="media">
+            <a class="pull-left" href="#">
+                <%= image_tag(review.user.image, :alt => review.user.name, :class => "media-object img-rounded") %> 
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading"><%= link_to review.user.name, review.user.urls %>  </h4>
+                <% if review.rating == 1 %>
+                    <h4 class="recotext">är besviken</h4>
+                    <div class="bravo">
+                        <span class="betyg star selected"></span>
+                        <span class="betyg emptystar selected"></span>
+                        <span class="betyg emptystar selected"></span>
+                        <span class="betyg emptystar selected"></span>
+                        <span class="betyg emptystar selected"></span>
+
+                    </div>
+                <% elsif review.rating == 2 %>
+                    <h4 class="recotext">är inte nöjd</h4>
+                    <div class="bravo">
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg emptystar selected"></span>
+                        <span class="betyg emptystar selected"></span>
+                        <span class="betyg emptystar selected"></span>
+                    </div>
+                <% elsif review.rating == 3 %>
+                    <h4 class="recotext">är nöjd</h4>
+                    <div class="bravo">
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg emptystar selected"></span>
+                        <span class="betyg emptystar selected"></span>
+
+                    </div>
+                <% elsif review.rating == 4 %>
+                    <h4 class="recotext">är mycket nöjd</h4>
+                    <div class="bravo">
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg emptystar selected"></span>
+                    </div>
+                <% else review.rating == 5 %>
+                    <h4 class="recotext">är super nöjd</h4>
+                    <div class="bravo">
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                        <span class="betyg star selected"></span>
+                    </div>
+
+                <% end %>                    
+                <p><%= review.content %></p>
+                <span class="spantext"><%= l review.created_at, :format => :short %></span>
+             </div>
+        </li>
+    </ul>
+    <% end %>
+<% else %>
+    <h4 id="noreco">Inga recensioner</h4>
+<% end %>
+</div>
+</div>

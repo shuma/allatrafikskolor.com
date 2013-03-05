@@ -1,0 +1,61 @@
+    <!-- Prices -->
+  <table class="table table-bordered">
+    <tr class="grey">
+      <th><h4>Priser</h4></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><span class="pricetext">40 minuter körlektion</span></td>
+      <td><span class="price"><%= @school.price.min %> kr</span></td>
+    </tr>
+    <tr>
+      <td><span class="pricetext">Litteratur och ev. inskrivningsavgift</span></td>
+      <td><span class="price"><%= @school.price.littin %> kr</span></td>
+    </tr>
+    <tr>
+      <td><span class="pricetext">Riskutbildning 1 (riskettan)</span></td>
+      <td><span class="price"><%= @school.price.risk1 %> kr</span></td>
+    </tr>
+    <tr>
+      <td><span class="pricetext">Riskutbildning 2 (halkan)</span></td>
+      <td><span class="price"><%= @school.price.risk2 %> kr</span></td>
+    </tr>
+    <tr>
+      <td><span class="pricetext">Hyra av bil vid uppkörning</span></td>
+      <td><span class="price"><%= @school.price.hyrbil %> kr</span></td>
+    </tr>
+    <tr>
+      <td><span class="pricetext">Körpaket inklusive kostnader för tillstånd och test</span></td>
+      <td>
+        <span class="price">
+          <%= @school.price.paket_pris %> kr
+        </span>
+      </td>
+    </tr>
+  </table>
+  <!-- Incheckningar -->
+  <table class="table table-bordered">
+    <tr class="grey">
+      <th><h4>Facebook vänner</h4></th>
+    </tr>
+      <th>
+        <div class="checkin_container">
+        <%= image_tag('location_pin_off.png') %>
+        <div class="checkin"> 
+            <p>Har dina Facebook-vänner varit här?</p>
+             <span class="checkin_count">
+                 <strong><%= @school.checkin.checkin_count %></strong> 
+                 personer har checkat in på <%= school.name %>
+              </span><br/>
+              <span class="checkin_count">
+                 För att se om någon av dina vänner varit här:
+              </span>  
+              <p><a href="#">Logga in med Facebook</a></p>
+        </div>
+        </div>
+      </th>
+    </tr>
+  </table>
+
+
+  

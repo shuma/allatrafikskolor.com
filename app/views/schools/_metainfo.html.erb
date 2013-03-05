@@ -1,0 +1,33 @@
+<div class="schoolrating">
+	<ul>
+			<li class="ratingtext">Betyg</li>
+		<% if @school.reviews.any? %>
+			<li class="ratingvalue"><%= format_rating(@school.avgerage_review_rating) %></li>
+		<% else %>
+			<li class="ratingvalue">0</li>
+		<% end %>
+			<li class="ratingantal"> <%= @school.count_reviews %> recensioner</li>
+	</ul>
+</div>
+<div class="metainfo">
+	<ul>
+		<li>
+			<%= image_tag('location.png') %>
+			<p>
+				<a href="#"><%= @school.locality %></a>
+			</p>
+		</li>
+		<li>
+			<%= image_tag('phone.png') %> 
+			<p>
+				<%= @school.tfn %>
+			</p>
+		</li>
+		<li>
+			<%= image_tag('globe.png') %>
+			<p>
+				<a href="<%= @school.url %>">Besök webbplats</a>
+			</p>
+		</li>
+	</ul>
+</div>

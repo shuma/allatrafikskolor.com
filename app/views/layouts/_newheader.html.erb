@@ -1,0 +1,33 @@
+<header id="header">
+  <div class="container">
+    <h1 class="sitename"><%= link_to "allatrafikskolor.com", root_path %></h1>
+        <nav>
+          <ul class="nav pull-left">
+           <li>
+            <%= form_tag schools_path, :method => :get, :class => "search_form" do %>
+              <div class="input-prepend input-append">
+                <%= text_field_tag :query, params[:query], 
+                                   :class => "search-query-large", 
+                                   :placeholder => "Sök ort eller trafikskola", 
+                                   :name => "query", :id => "appendedPrependedInput" 
+                %>
+                 <%= submit_tag "Sök", :name => nil, :class => "add-on" %>
+              </div>
+            <% end %>
+           </li>
+          </ul>
+          <ul class="pull-right">
+            <% if current_user %>
+              <li><strong>Hej, <%= current_user.name %></strong></li>
+              <li><%= link_to "Logga ut", signout_path, id: "sign_out" %></li>
+            <% else %>
+              <li>
+                <div class="facebook_inloggning">
+                  <%= image_tag('facebook_small.png') %>
+                  <%= link_to "Logga in med facebook", "/auth/facebook", id: "sign_in" %>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+       </nav>
+</header>

@@ -1,0 +1,31 @@
+  <header class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <nav>
+          <ul class="nav pull-left">
+            <%= form_tag schools_path, :method => :get, :class => "search_form" do %>
+              <div class="input-prepend input-append">
+                <%= text_field_tag :search, params[:search], :class => "search-query-large", :placeholder => "Sök ort eller trafikskola", :name => "search", :id => "appendedPrependedInput" %>
+                 <!-- <span class="add-on"><%= link_to 'Sök', schools_path, :method => :get %></span -->                
+                 <%= submit_tag "Sök", :name => nil, :class => "add-on" %>
+              </div>
+              <!-- <span class="search-help-block">Exempel: "Odenplan", "Holmgatan, Malmö" eller "Mårtensson trafikskola"</span> -->
+            <% end %>
+          </ul>
+          <ul class="nav pull-right">
+              <% if user_signed_in? %>
+
+               <!-- <li><%= link_to 'Edit profile', edit_user_registration_path %></li> -->
+                <li><%= link_to "Logga ut", destroy_user_session_path, method: :delete %></li>
+                <li><a class="active_menu" href="#"><%= current_user.name %></a></li>
+              <% else %>
+                <!-- <li><%= link_to "Bli medlem", new_user_registration_path %></li>
+                <li><%= link_to "Logga in", new_user_session_path %></li> -->
+                <li><%= link_to '<i class="icon-user icon-white"></i> Logga in med facebook'.html_safe, 
+                        user_omniauth_authorize_path(:facebook), :class => "active_menu"  %></li>
+              <% end %>
+         </ul>
+       </nav>
+     </div>
+   </div>
+ </header>

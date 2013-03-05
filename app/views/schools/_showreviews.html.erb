@@ -1,0 +1,12 @@
+<h2><%= @school.reviews.count %> RECENSIONER</h2>
+    <% @school.reviews.each do |review| %>
+        <div class="review_box">
+            <p><strong><%= review.user_name %></strong>:</p>
+            <p><%= review.content %></p>
+            <%= image_tag(review.user_image, :alt => review.user_name) %>
+                <em>
+                    &mdash;
+                    <strong><%= review.rating %> stjänor</strong>
+                </em>
+        </div>
+    <% end %> 

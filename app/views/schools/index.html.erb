@@ -1,0 +1,42 @@
+<div class="span12">
+	<div class="searchresults">	
+		<h1>Trafikskolor i <%= params[:query] %> <span></span></h1>
+		 <ul>
+			<li>
+				<span class="label label-success">
+					<%= link_to "Billigast i #{params[:query]}",
+								"http://localhost:3000/trafikskola?utf8=%E2%9C%93&query=#{params[:query]}&sort=asc" %>
+				</span>
+			</li>
+			<li>
+				<span class="label label">
+					<%= link_to "Dyrast i #{params[:query]}",
+								"http://localhost:3000/trafikskola?utf8=%E2%9C%93&query=#{params[:query]}&sort=desc" %>
+				</span>
+			</li>
+		</ul>
+		<table class="table searchresults">
+			<tr>
+				<th><h3>Trafikskola</h3></th>
+				<th><h3>Pris per timme</h3></th>
+				<th><h3>Pris för körkortspaket</h3></th>
+			</tr>
+			<% @schools.each do |school| %>
+				<tr>
+					<td> 
+						<h3><%= link_to school.name, school %></h3>
+						<p><%= school.adress %></p>
+					</td>
+					<td><h3><%= school.price.min %> kr</h3></td>
+					<td><h3><%= school.price.paket_pris %> kr</h3></td>
+				</tr>
+			<% end %>
+		</table>
+		<div class="digg_pagination">
+			<%= will_paginate @schools, :container => false, 
+										:params => { :search_text => params[:search_text] },
+										:previous_label => "Föregånde",
+										:next_label => "Nästa" %>
+		</div>
+	</div>
+</div>

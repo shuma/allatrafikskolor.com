@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+    <div class="reviews">
+    <%= form_for [@school, Review.new] do |f| %>
+        <h3>Recensera detta trafikskola</h3>
+        <div class="reviews_comments_container">
+            <div class="review_box">
+                <span id="betyg">Ange ett betyg (1-5) </span>
+                <ol class="radio-rater">
+                    <%= f.radio_button(:rating, 1) %>
+                    <%= f.radio_button(:rating, 2) %>
+                    <%= f.radio_button(:rating, 3) %>
+                    <%= f.radio_button(:rating, 4) %>
+                    <%= f.radio_button(:rating, 5) %>
+                </ol>
+            </div>
+            <div class="review_box" id="review_textarea">
+                <%= f.text_area :content, rows: 4, cols: 70, placeholder: "Skriv en kort recension..." %>
+            </div>
+            <div class="review_box">
+                <%= f.submit 'Spara din recension', :class => "btn" %>
+            </div>
+        </div>
+    <% end %>
+<% else %>
+    <p><a href="#">Logga in med facebook för att skriva recensioner</a></p>
+<% end %>
+    </div>

@@ -1,0 +1,10 @@
+I noticed that you have assigned each feeling a color -- how did you choose the color for each feeling?
+
+For the most common 150 feelings, we chose the colors manually, and we tried to choose colors that reflected the feeling. For example, the angry feelings we chose to be shades of red, the calm feelings shades of blue, and the happy feelings shades of yellow. For the rest of the feelings, we assigned color randomly.
+
+
+Color for each feeling:
+- Dålig = shades of red
+- Acceptabelt, Bra = shades of blue 
+- Mycket bra, Utmärkt = shades of yellow 
+ 

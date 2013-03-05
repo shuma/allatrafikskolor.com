@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  min: 1
+  littin: 1
+  risk1: 1
+  risk2: 1
+  hyrbil: 1
+  school_id: 1
+
+two:
+  min: 1
+  littin: 1
+  risk1: 1
+  risk2: 1
+  hyrbil: 1
+  school_id: 1

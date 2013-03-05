@@ -1,0 +1,114 @@
+<div class="span12">
+	<div class="row">
+		<div class="span6">
+			<h1>Hitta din trafikskola</h1>
+			<div class="homeintro_content">
+			<p>
+				Allatrafikskolor.com är en oberoende prisjämförelse av trafikskolor. Det är dyrt att ta körkort
+				idag och därför är det extra viktigt att hitta rätt trafikskola. 
+			</p>
+					
+					<div class="bubble">
+						<p>Jag heter Usman och det är jag som har gjort
+							den här sajten. Den är öppen att använda för alla,
+							hitta din trafikskola eller skriv gärna en rekommendation.
+						</p>
+					</div>
+					<div class="user_pic">
+						<a href="http://rajab.se" alt="Usman Rajab">
+							<%= image_tag('meme.png')%>
+							<span class="name">Usman Rajab</span>
+						</a>
+					</div>
+		</div>
+	</div>
+		<div class="span6">
+			<div class="latest_review">
+			<h3>Senaste rekommendationer:</h3>	
+			<% @lates_reviews.each do |review| %>
+				<div class="media">
+					 <a class="pull-left" href="#">
+					 	<%= image_tag("#{review.user.image}", :class => "media-object img-rounded") %>
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading"><%= review.user.name %> 
+							<span class="about">skrev om</span>
+							<span class="school_name"><%= review.school.name %>
+								<a href="#"></a>
+							</span>
+						</h4>
+						<p> <%= review.content %></p>
+					</div>
+				</div>
+			<% end %>
+			</div>
+	    </div>
+	</div>
+</div>
+<div class="span6">
+	<h3 class="home_h3">Top 5 trafikskolor i Sverige</h3>
+		<% @top_schools.each do |school| %>
+			<div class="item">
+				<div class="rating_value bgr1">
+					<p><%= format_rating(school.avgerage_review_rating) %></p>
+					<span>Betyg</span>
+				</div>
+				<div class="metainfo_home">
+					<p><%= link_to school.name, school %></p>
+					<span><%= school.locality %></span>
+					<!--<span><%= school.reviews.count %> recensioner</span>-->
+					<!--<span> <strong><%= school.locality.capitalize! %></strong></span>-->
+				</div>
+			</div>
+		<% end %>
+</div>
+<div class="span6">
+	<!-- <h3>Hitta trafikskolor nära dig</h3>
+	<div class="lan first">
+		<ul>
+			<li><a href="">Blekinge län</a></li>
+			<li><a href="">Dalarnas län</a></li>
+			<li><a href="">Gotlands län</a></li>
+			<li><a href="">Gävleborgs län</a></li>
+			<li><a href="">Hallands län</a></li>
+			<li><a href="">Jämtlands län</a></li>
+			<li><a href="">Jönköpings län</a></li>
+		</ul>
+	</div>
+	<div class="lan">
+		<ul>
+			<li><a href="">Kalmar län</a></li>
+			<li><a href="">Kronobergs län</a></li>
+			<li><a href="">Norrbottens län</a></li>
+			<li><a href="">Skåne län</a></li>
+			<li><a href="">Stockholms län</a></li>
+			<li><a href="">Södermanlands län</a></li>
+			<li><a href="">Uppsala län</a></li>
+		</ul>
+	</div>
+	<div class="lan">
+		<ul>
+			<li><a href="">Värmlands län</a></li>
+			<li><a href="">Västerbottens län</a></li>
+			<li><a href="">Västernorrlands län</a></li>
+			<li><a href="">Västmanlands län</a></li>
+			<li><a href="">Västra Götalands län</a></li>
+			<li><a href="">Örebro län</a></li>
+			<li><a href="">Östergötlands län</a></li>
+		</ul>
+	</div>-->
+	<h3 class="home_h3">Populära trafikskolor på Facebook</h3>
+		<% @top_likes.each do |school| %>
+			<div class="item">
+				<div class="rating_value bgr2">
+					<p><%= school.likes.fan_count %></p>
+					<span>Likes</span>
+				</div>
+				<div class="metainfo_home">
+					<p><%= link_to school.name, school %></p>
+					<span><%= school.locality %></span>
+					<!--<span> <strong><%= school.locality.capitalize! %></strong></span>-->
+				</div>
+			</div>
+		<% end %>
+</div>
