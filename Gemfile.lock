@@ -181,7 +181,7 @@ DEPENDENCIES
   meta_request
   omniauth
   omniauth-facebook
-  pg (= 0.12.2)
+  pg
   progress_bar
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
