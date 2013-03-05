@@ -63,7 +63,7 @@ module TrafikskolaApp
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     # On config/application.rb forcing your application to not access the DB
     # or load models when precompiling your assets.
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
     # Devise language selection for errors
     config.i18n.default_locale = :sv
   end
