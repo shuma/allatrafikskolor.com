@@ -12,6 +12,7 @@ gem 'koala'
 gem "friendly_id", "~> 4.0.1"
 gem 'andand'
 gem 'tire'
+gem 'sass-rails',   '~> 3.2.3'
 
 group :development do
 	gem 'annotate', '2.5.0'
@@ -24,7 +25,6 @@ group :development do
 end
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   # gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
@@ -32,6 +32,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'sass-rails',   '~> 3.2.3'
 end
 
 
