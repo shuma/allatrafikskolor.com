@@ -2,10 +2,8 @@ class CreateSchools < ActiveRecord::Migration
   def change
     create_table :schools do |t|
       t.string :name
-      t.text   :desc
       t.text :adress
       t.string :locality
-      t.text :benefits
       t.string :tfn
       t.string :url
       t.timestamps
