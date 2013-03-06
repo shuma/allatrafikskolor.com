@@ -44,13 +44,14 @@
 				</div>
 			<% end %>
 
-		<% end> %>
+		<% end %>
 			</div>
 	    </div>
 	</div>
 </div>
 <div class="span6">
 	<h3 class="home_h3">Top 5 trafikskolor i Sverige</h3>
+	<% if @top_schools.any? %>
 		<% @top_schools.each do |school| %>
 			<div class="item">
 				<div class="rating_value bgr1">
@@ -65,6 +66,7 @@
 				</div>
 			</div>
 		<% end %>
+	<% end %>
 </div>
 <div class="span6">
 	<!-- <h3>Hitta trafikskolor nära dig</h3>
