@@ -12,7 +12,7 @@ class School < ActiveRecord::Base
     
   include Tire::Model::Search
   include Tire::Model::Callbacks
-  #index_name school_index
+
 
   def self.search(params)
     params[:sort] ||= 'asc'
