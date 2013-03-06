@@ -4193,15 +4193,6 @@ Price.create([
   { :min => 460, :littin => 1650, :risk1 => 850, :risk2 => 2000, :hyrbil => 650, :paket_pris => 13600, :school_id => 832, :created_at => "2013-02-02 17:08:19", :updated_at => "2013-02-02 17:08:19" }
 ], :without_protection => true )
 
-
-
-Review.create([
-  { :content => "En riktigt bra trafikskola som hjälpte mig oerhört mycket med körkortet. Trevlig personal och bra lokal. Själv hade jag Andree som lärare och han var grym! Rekommenderas till alla som vill ta körkort. ", :rating => 4, :school_id => 292, :user_id => 1, :created_at => "2013-01-16 16:52:36", :updated_at => "2013-01-16 16:52:36" },
-  { :content => "Kan verkligen varmt rekommendera att ta A-kortet hos Mårtenssons. Tobbe är en fantastiskt stödjande och uppmuntrande lärare! Fick också ut mycket av att någon gång köra med Jonas, som gav mig andra nyttiga tips. Dessutom har \"tjejerna i receptionen\" varit grymt bra på att försöka klämma in mig på tider. Jag är otroligt nöjd! ", :rating => 5, :school_id => 292, :user_id => 1, :created_at => "2013-01-16 16:50:48", :updated_at => "2013-01-16 16:50:48" }
-], :without_protection => true )
-
-
-
 School.create([
   { :name => "Bodekull Trafikskola", :desc => "Beskrivning av trafikskolan saknas", :adress => "Ronnebygatan 30             374 35      KARLSHAMN", :locality => "KARLSHAMN", :benefits => "Skräddarsydd undervisning", :tfn => "0454-18080", :url => "http://www.bodekulltrafikskola.se", :created_at => "2013-02-02 17:05:52", :updated_at => "2013-02-02 17:05:52", :slug => "bodekull-trafikskola" },
   { :name => "Lundbergs Bilskola", :desc => "Beskrivning av trafikskolan saknas", :adress => "Ågatan 34             374 38      KARLSHAMN", :locality => "KARLSHAMN", :benefits => "", :tfn => "0454-12141", :url => "http://lundbergsbilskola.se/", :created_at => "2013-02-02 17:05:52", :updated_at => "2013-02-02 17:05:52", :slug => "lundbergs-bilskola" },
@@ -5032,12 +5023,6 @@ School.create([
   { :name => "Vadstena Trafikskola", :desc => "Beskrivning av trafikskolan saknas", :adress => "Lorentz Personsgatan 7             592 32      VADSTENA", :locality => "VADSTENA", :benefits => "", :tfn => "0143-13260", :url => "http://www.vadstenatrafikskola.se", :created_at => "2013-02-02 17:08:18", :updated_at => "2013-02-02 17:08:18", :slug => "vadstena-trafikskola" },
   { :name => "AR Trafikskola", :desc => "Beskrivning av trafikskolan saknas", :adress => "Drottninggatan 1A             59135      Motala", :locality => "Motala", :benefits => "", :tfn => "0733-192409", :url => "http://www.artrafikskola.se/", :created_at => "2013-02-02 17:08:18", :updated_at => "2013-02-02 17:08:18", :slug => "ar-trafikskola" },
   { :name => "Körkortsintensiven", :desc => "Beskrivning av trafikskolan saknas", :adress => "Söderleden 4             587 23      Linköping", :locality => "Linköping", :benefits => "", :tfn => "013-130460", :url => "http://www.korkortsintensiven.com/", :created_at => "2013-02-02 17:08:19", :updated_at => "2013-02-02 17:08:19", :slug => "korkortsintensiven" }
-], :without_protection => true )
-
-
-
-User.create([
-  { :provider => "facebook", :uid => "841617085", :name => "Usman Rajab", :email => "usman.rajab@gmail.com", :image => "http://graph.facebook.com/841617085/picture?type=square", :location => "Malmö, Sweden", :gender => "male", :urls => "http://www.facebook.com/usman.rajab", :oauth_token => "AAAEMSIx4tuoBACoZBA9kxWKLC1ZCukVa4myLEmdDYJNblld0MD7oMqyA2Xn95ZC9KRlsTpyG6N6fZBZCFkdcAwd5BrcLGcoVeblCZAj8AeHgZDZD", :oauth_expires_at => "2013-04-02 13:34:30", :created_at => "2013-01-16 16:49:47", :updated_at => "2013-02-01 13:34:32" }
 ], :without_protection => true )
 
 
