@@ -24,7 +24,8 @@
 	</div>
 		<div class="span6">
 			<div class="latest_review">
-			<h3>Senaste rekommendationer:</h3>	
+			<h3>Senaste rekommendationer:</h3>
+		<% if @lates_reviews.any? %>	
 			<% @lates_reviews.each do |review| %>
 				<div class="media">
 					 <a class="pull-left" href="#">
@@ -41,6 +42,8 @@
 					</div>
 				</div>
 			<% end %>
+
+		<% end> %>
 			</div>
 	    </div>
 	</div>

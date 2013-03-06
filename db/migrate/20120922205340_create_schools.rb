@@ -8,8 +8,8 @@ class CreateSchools < ActiveRecord::Migration
       t.string :benefits
       t.string :tfn
       t.string :url
-      t.string :slug
       t.timestamps
+      t.string :slug
     end
   end
 end
