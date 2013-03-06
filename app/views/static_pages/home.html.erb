@@ -16,7 +16,7 @@
 					</div>
 					<div class="user_pic">
 						<a href="http://rajab.se" alt="Usman Rajab">
-							<%= image_tag('meme.png')%>
+							<%= image_tag('pic3.jpg')%>
 							<span class="name">Usman Rajab</span>
 						</a>
 					</div>
@@ -25,7 +25,7 @@
 		<div class="span6">
 			<div class="latest_review">
 			<h3>Senaste rekommendationer:</h3>
-		<% if @lates_reviews.any? %>	
+			
 			<% @lates_reviews.each do |review| %>
 				<div class="media">
 					 <a class="pull-left" href="#">
@@ -44,14 +44,14 @@
 				</div>
 			<% end %>
 
-		<% end %>
+		
 			</div>
 	    </div>
 	</div>
 </div>
 <div class="span6">
 	<h3 class="home_h3">Top 5 trafikskolor i Sverige</h3>
-	<% if @top_schools.any? %>
+	
 		<% @top_schools.each do |school| %>
 			<div class="item">
 				<div class="rating_value bgr1">
@@ -61,48 +61,12 @@
 				<div class="metainfo_home">
 					<p><%= link_to school.name, school %></p>
 					<span><%= school.locality %></span>
-					<!--<span><%= school.reviews.count %> recensioner</span>-->
-					<!--<span> <strong><%= school.locality.capitalize! %></strong></span>-->
 				</div>
 			</div>
 		<% end %>
-	<% end %>
+	
 </div>
 <div class="span6">
-	<!-- <h3>Hitta trafikskolor nära dig</h3>
-	<div class="lan first">
-		<ul>
-			<li><a href="">Blekinge län</a></li>
-			<li><a href="">Dalarnas län</a></li>
-			<li><a href="">Gotlands län</a></li>
-			<li><a href="">Gävleborgs län</a></li>
-			<li><a href="">Hallands län</a></li>
-			<li><a href="">Jämtlands län</a></li>
-			<li><a href="">Jönköpings län</a></li>
-		</ul>
-	</div>
-	<div class="lan">
-		<ul>
-			<li><a href="">Kalmar län</a></li>
-			<li><a href="">Kronobergs län</a></li>
-			<li><a href="">Norrbottens län</a></li>
-			<li><a href="">Skåne län</a></li>
-			<li><a href="">Stockholms län</a></li>
-			<li><a href="">Södermanlands län</a></li>
-			<li><a href="">Uppsala län</a></li>
-		</ul>
-	</div>
-	<div class="lan">
-		<ul>
-			<li><a href="">Värmlands län</a></li>
-			<li><a href="">Västerbottens län</a></li>
-			<li><a href="">Västernorrlands län</a></li>
-			<li><a href="">Västmanlands län</a></li>
-			<li><a href="">Västra Götalands län</a></li>
-			<li><a href="">Örebro län</a></li>
-			<li><a href="">Östergötlands län</a></li>
-		</ul>
-	</div>-->
 	<h3 class="home_h3">Populära trafikskolor på Facebook</h3>
 		<% @top_likes.each do |school| %>
 			<div class="item">
@@ -113,7 +77,6 @@
 				<div class="metainfo_home">
 					<p><%= link_to school.name, school %></p>
 					<span><%= school.locality %></span>
-					<!--<span> <strong><%= school.locality.capitalize! %></strong></span>-->
 				</div>
 			</div>
 		<% end %>
