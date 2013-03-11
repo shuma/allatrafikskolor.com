@@ -48,6 +48,7 @@
                    <% if current_user %>
                         <strong><%= @school.checkin.checkin_count %></strong> 
                         personer har checkat in på <%= school.name %></br>
+                        <span class="checkin_count">Inga av dina vänner har varit här</span> 
                    <% else %>
                        <strong><%= @school.checkin.checkin_count %></strong> 
                        personer har checkat in på <%= school.name %></br>
