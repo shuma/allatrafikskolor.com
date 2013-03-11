@@ -44,13 +44,22 @@
         <div class="checkin"> 
             <p>Har dina Facebook-vänner varit här?</p>
              <span class="checkin_count">
-                 <strong><%= @school.checkin.checkin_count %></strong> 
-                 personer har checkat in på <%= school.name %>
+                  <% if @school.checkin %>
+                   <% if current_user %>
+                        <strong><%= @school.checkin.checkin_count %></strong> 
+                        personer har checkat in på <%= school.name %></br>
+                   <% else %>
+                       <strong><%= @school.checkin.checkin_count %></strong> 
+                       personer har checkat in på <%= school.name %></br>
+                       <span class="checkin_count">För att se om någon av dina vänner varit här:</span>  
+                       <p><%= link_to 'Logga in med Facebook', '/auth/facebook' %></p>
+                   <% end %>
+                  <% else %>
+                       <strong>0</strong> 
+                       personer har checkat in på <%= school.name %>
+                  <% end %>
+                   
               </span><br/>
-              <span class="checkin_count">
-                 För att se om någon av dina vänner varit här:
-              </span>  
-              <p><a href="#">Logga in med Facebook</a></p>
         </div>
         </div>
       </th>
