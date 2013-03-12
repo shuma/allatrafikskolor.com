@@ -3,15 +3,17 @@
 		<h1>Trafikskolor i <%= params[:query] %> <span></span></h1>
 		 <ul>
 			<li>
-				<span class="label label-success">
+				<span class="resCheck label label-success">
 					<%= link_to "Billigast i #{params[:query]}",
-								"trafikskola?utf8=%E2%9C%93&query=#{params[:query]}&sort=asc" %>
+								"trafikskola?utf8=%E2%9C%93&query=#{params[:query]}&sort=asc", 
+								:class => "resCheckLink" %>
 				</span>
 			</li>
 			<li>
-				<span class="label label">
+				<span class="resCheck label">
 					<%= link_to "Dyrast i #{params[:query]}",
-								"trafikskola?utf8=%E2%9C%93&query=#{params[:query]}&sort=desc" %>
+								"trafikskola?utf8=%E2%9C%93&query=#{params[:query]}&sort=desc",
+								:class => "resCheckLink" %>
 				</span>
 			</li>
 		</ul>
