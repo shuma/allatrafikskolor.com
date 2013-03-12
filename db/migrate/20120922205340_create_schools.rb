@@ -3,6 +3,7 @@ class CreateSchools < ActiveRecord::Migration
     create_table :schools do |t|
       t.string :name
       t.text :adress
+      t.text :benefits
       t.string :locality
       t.string :tfn
       t.string :url

@@ -78,18 +78,15 @@ ActiveRecord::Schema.define(:version => 20130214161108) do
 
   create_table "schools", :force => true do |t|
     t.string   "name"
-    t.text     "desc"
-    t.string   "adress"
+    t.text     "adress"
+    t.text     "benefits"
     t.string   "locality"
-    t.string   "benefits"
     t.string   "tfn"
     t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "slug"
   end
-
-  add_index "schools", ["slug"], :name => "index_schools_on_slug"
 
   create_table "users", :force => true do |t|
     t.string   "provider"
