@@ -4,7 +4,6 @@ gem 'rails', '3.2.11'
 gem 'bootstrap-sass', '~> 2.2.1.1'
 gem 'jquery-rails'
 gem 'will_paginate', '~> 3.0'
-#gem 'sunspot_solr'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'koala'
@@ -32,6 +31,7 @@ end
 group :production do
   gem 'pg'
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'thin'
 end
 
 
