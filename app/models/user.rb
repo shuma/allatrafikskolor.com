@@ -57,7 +57,7 @@ class User < ActiveRecord::Base
       # Dela recensionen till facebook 
       def self.share_review(user_id, school_url)
         user = User.find(user_id)
-        user.facebook.put_connections("me", "allatrafikskolor:review", driving_school: school_url)
+        user.facebook.put_connections("me", "allatrafikskolor:review", :driving_school => school_url)
       end
 
   
