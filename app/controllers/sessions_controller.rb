@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 	def create
 		user = User.from_omniauth(env["omniauth.auth"])
 		session[:user_id] = user.id 
-    redirect_to :back
+    	redirect_to :back
 	end
 
 	def destroy
@@ -16,8 +16,9 @@ class SessionsController < ApplicationController
 
   def after_sign_in_path
     if session[:review]
-      
-      Review.create!(:content => session[:review][:content], :school_id => session[:review][:school_id], :user_id => current_user.id, :rating => session[:review][:rating])      
+      Review.create!(:content => session[:review][:content], 
+      				 :school_id => session[:review][:school_id], 
+      				 :user_id => current_user.id, :rating => session[:review][:rating])      
       #cleanup
       session[:review] = nil
     end

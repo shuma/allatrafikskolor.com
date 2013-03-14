@@ -12,6 +12,9 @@ class ReviewsController < ApplicationController
    		else
         	render :new
     	end
+        if current_user
+            current_user.facebook.put_connections("me", "allatrafikskolor:review", school: school_url(@school))
+        end
 	end
 
 	def new
