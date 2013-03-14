@@ -1,7 +1,7 @@
 <% content_for :head do %>
   <%= tag :meta, property: "fb:app_id", content: ENV["FACEBOOK_APP_ID"] %>
   <%= tag :meta, property: "og:site_name", content: "allatrafikskolor" %>
-  <%= tag :meta, property: "og:type", content: "allatrafikskolor:driving_school" %>
+  <%= tag :meta, property: "og:type", content: "allatrafikskolor:review" %>
   <%= tag :meta, property: "og:title", content: @school.name %>
   <%= tag :meta, property: "og:url", content: school_url(@school) %>
   <%= tag :meta, property: "og:image", content: request.protocol + request.host_with_port + image_path("logo.png") %>

@@ -11,6 +11,7 @@ gem "friendly_id", "~> 4.0.1"
 gem 'andand'
 gem 'tire'
 gem 'sass-rails',   '~> 3.2.3'
+gem 'delayed_job_active_record'
 
 group :development do
 	gem 'annotate', '2.5.0'

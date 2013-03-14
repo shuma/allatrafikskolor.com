@@ -12,8 +12,9 @@ class ReviewsController < ApplicationController
    		else
         	render :new
     	end
+
         if current_user
-            current_user.facebook.put_connections("me", "allatrafikskolor:review", driving_school: school_url(@school))
+            User.delay.share_review(current_user.id, school_url(@school))
         end
 	end
 

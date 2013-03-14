@@ -53,6 +53,13 @@ class User < ActiveRecord::Base
              checkin.save!
             end
       end
+
+      # Dela recensionen till facebook 
+      def self.share_review(user_id, school_url)
+        user = User.find(user_id)
+        user.facebook.put_connections("me", "allatrafikskolor:review", driving_school: school_url)
+      end
+
   
   # Antalet checkins på facebook
   def count_checkins(name,id)
