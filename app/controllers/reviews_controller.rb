@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
         	render :new
     	end
         if current_user
-            current_user.facebook.put_connections("me", "allatrafikskolor:review", school: school_url(@school))
+            current_user.facebook.put_connections("me", "allatrafikskolor:review", driving_school: school_url(@school))
         end
 	end
 
