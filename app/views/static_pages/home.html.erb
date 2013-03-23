@@ -34,7 +34,8 @@
 					<div class="media-body">
 						<h4 class="media-heading"><%= review.user.name %> 
 							<span class="about">skrev om</span>
-							<span class="school_name"><%= review.school.name %>
+							<span class="school_name">
+								<%= link_to review.school.name, review.school %>
 								<a href="#"></a>
 							</span>
 						</h4>
