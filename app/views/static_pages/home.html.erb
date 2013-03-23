@@ -25,7 +25,23 @@
 		<div class="span6">
 			<div class="latest_review">
 			<h3>Senaste rekommendationer:</h3>
-			
+			<% @lates_reviews.each do |review| %>
+				<div class="media">
+					 <a class="pull-left" href="#">
+					 	<%= image_tag("#{review.user.image}", :class => "media-object img-rounded") %>
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading"><%= review.user.name %> 
+							<span class="about">skrev om</span>
+							<span class="school_name">
+								<%= link_to review.school.name, review.school %>
+								<a href="#"></a>
+							</span>
+						</h4>
+						<p> <%= review.content %></p>
+					</div>
+				</div>
+			<% end %>
 			</div>
 	    </div>
 	</div>
