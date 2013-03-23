@@ -25,8 +25,8 @@
 		<div class="span6">
 			<div class="latest_review">
 			<h3>Senaste rekommendationer:</h3>
-			<% unless @lates_reviews.nil? %>	
 			<% @lates_reviews.each do |review| %>
+				<% if @lates_reviews.count > 1 %>
 				<div class="media">
 					 <a class="pull-left" href="#">
 					 	<%= image_tag("#{review.user.image}", :class => "media-object img-rounded") %>
@@ -42,9 +42,10 @@
 						<p> <%= review.content %></p>
 					</div>
 				</div>
+				<% else %>
+				<h2> Inga rekommendationer än</h2>
+				<% end %>
 			<% end %>
-			<% end %>
-		
 			</div>
 	    </div>
 	</div>
