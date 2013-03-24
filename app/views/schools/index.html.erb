@@ -29,8 +29,20 @@
 						<h3><%= link_to school.name, school %></h3>
 						<p><%= school.adress %></p>
 					</td>
-					<td><h3><%= school.price.min %> kr</h3></td>
-					<td><h3><%= school.price.paket_pris %> kr</h3></td>
+					<td>
+						<h3>
+							<span class="label pricespan">
+								<%= school.price.min %> kr
+							</span>
+						</h3>
+					</td>
+					<td>
+						<h3>
+							<span class="label pricespan prispaketspan"> 
+								<%= school.price.paket_pris %> kr
+							</span>
+						</h3>
+					</td>
 				</tr>
 			<% end %>
 		</table>

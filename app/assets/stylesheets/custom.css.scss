@@ -621,7 +621,18 @@ input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:
 .searchresults h3 {
   font-size: 18px;
   font-weight: 300;
+}
+.searchresults span {
   font-family: "Myriad Pro",Myriad,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.pricespan {
+  padding: 8px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+.prispaketspan {
+  background-color: #68b0dd; 
 }
 .searchresults th h3 {
   font-weight: 600;
