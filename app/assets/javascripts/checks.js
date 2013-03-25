@@ -1,6 +1,6 @@
-$(function(){
-    $('.resCheckLink').click(function(e){
-        $('.resCheck.label').removeClass('label-success');
-        $(this).parent().addClass('label-success')
-    });
+$(document).ready(function(){
+    $('.resCheckLink').click(function(e){
+        $('.resCheck').removeClass('label-success');
+        $(this).parent().addClass('label-success');
+    });
 });

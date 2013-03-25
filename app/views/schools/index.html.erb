@@ -3,7 +3,7 @@
 		<h1>Trafikskolor i <%= params[:query] %> <span></span></h1>
 		 <ul>
 			<li>
-				<span class="resCheck label label-success">
+				<span class="resCheck label">
 					<%= link_to "Billigast i #{params[:query]}",
 								"trafikskola?utf8=%E2%9C%93&query=#{params[:query]}&sort=asc", 
 								:class => "resCheckLink", :method => "get" %>
@@ -31,7 +31,7 @@
 					</td>
 					<td>
 						<h3>
-							<span class="label pricespan">
+							<span class="label pricespan prispertimme">
 								<%= school.price.min %> kr
 							</span>
 						</h3>
