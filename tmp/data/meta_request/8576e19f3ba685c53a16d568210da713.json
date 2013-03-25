@@ -1,1 +1,0 @@
-["ActionController::RoutingError (uninitialized constant School::SCHOOL_INDEX)","app/models/school.rb:15:in `<class:School>'","app/models/school.rb:1:in `<top (required)>'","app/controllers/schools_controller.rb:1:in `<top (required)>'"]
