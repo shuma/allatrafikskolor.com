@@ -82,6 +82,7 @@ GEM
     meta_request (0.2.1)
       rack-contrib
       rails
+    metamagic (2.0.5)
     mime-types (1.19)
     multi_json (1.5.0)
     multipart-post (1.1.5)
@@ -181,6 +182,7 @@ DEPENDENCIES
   jquery-rails
   koala
   meta_request
+  metamagic
   omniauth
   omniauth-facebook
   pg

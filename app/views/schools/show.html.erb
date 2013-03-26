@@ -6,6 +6,12 @@
   <%= tag :meta, property: "og:url", content: school_url(@school) %>
   <%= tag :meta, property: "og:image", content: request.protocol + request.host_with_port + image_path("logo.png") %>
 <% end %>
+
+<%
+meta :title => " #{@school.name} | Hittatrafikskola.nu",
+     :description => "#{@school.name}",
+     :keywords => %w(trafikskola körkort b-körkort)
+%>
 <div class="span3">
 	<h1><%= @school.name %></h1>
 	<%= render 'schools/metainfo' %>
