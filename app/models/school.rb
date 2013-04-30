@@ -9,6 +9,7 @@ class School < ActiveRecord::Base
 
   scope :by_score,   :joins => :reviews, :group => "schools.id", :order => "AVG(reviews.rating) DESC"
   scope :by_likes,   :joins => :likes,   :group => "schools.id", :order => "AVG(likes.fan_count) DESC"
+  scope :by_desc,    :joins => :reviews, :group => "schools.id", :order => "DESC"
     
   include Tire::Model::Search
   include Tire::Model::Callbacks
